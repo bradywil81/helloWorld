@@ -21,3 +21,5 @@ jobs:
         echo test, and deploy your project.
     - name: Mac version
       run: system_profiler SPSoftwareDataType
+    - name: install npm
+      run: npm install
