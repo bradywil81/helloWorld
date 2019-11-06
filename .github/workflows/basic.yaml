@@ -8,8 +8,9 @@ jobs:
     runs-on: ${{ matrix.operating-system }} 
     strategy: 
       matrix: 
-        operating-system: [ubuntu-latest, macOs-latest]
-        more: [1,2]
+        operating-system: [macOs-latest]
+#        operating-system: [ubuntu-latest, macOs-latest]
+#        more: [1,2]
     steps:
     - uses: actions/checkout@master
     - name: Run a one-line script on ${{ matrix.operating-system }}
@@ -18,3 +19,5 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+    - name: Mac version
+      run: system_profiler SPSoftwareDataType
