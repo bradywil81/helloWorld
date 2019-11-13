@@ -8,8 +8,8 @@ jobs:
     runs-on: ${{ matrix.operating-system }} 
     strategy: 
       matrix: 
-        operating-system: [macOs-latest]
-#        operating-system: [ubuntu-latest, macOs-latest]
+#        operating-system: [macOs-latest]
+        operating-system: [ubuntu-latest, ubuntu-16.04]
 #        more: [1,2]
     steps:
     - uses: actions/checkout@master
@@ -19,7 +19,8 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-    - name: Mac version
-      run: system_profiler SPSoftwareDataType
-    - name: install npm
-      run: npm install
+        df
+#    - name: Mac version
+#      run: system_profiler SPSoftwareDataType
+#    - name: install npm
+#      run: npm install
